@@ -1,0 +1,32 @@
+first step setup
+--------------
+1. ruby -v 
+2. gem install sass
+3. gem source -a http://rubygems.org/
+
+2nd step (sass and css integrated )
+-----------------
+1. sass --watch path/sass-directory/scss/style.scss:path/css-directory/style.css
+
+
+sass responsive
+-------------------
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$small_mobile:'(max-width: 767px)';
+$large_mobile: 'only screen and (min-width: 480px) and (max-width: 767px)';
+
+process
+------------------
+body{
+	@media #{$medium_device}{
+		background:red;
+	}
+	@media #{$tab_device}{
+		background:green;
+	}
+	@media #{$small_mobile}{
+		background:yellow;
+	}
+}
+
